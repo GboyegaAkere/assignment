@@ -13,7 +13,7 @@ const App = () => {
   return (
      <div className="bg-black min-h-screen relative">
       <Navbar />
-      <Hero />
+      <Hero/>
       <Experience/>
       <FeaturedWork/>
       <Toolbox/>

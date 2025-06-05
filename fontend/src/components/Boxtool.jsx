@@ -39,7 +39,7 @@ const testimonials = [
 
 const duplicatedTestimonials = [...testimonials, ...testimonials];
 
-const Toolbox = () => {
+const Boxtool = () => {
  return (
     <section className="bg-black py-10 px-10 mx-5 sm:mx-20 sm:py-5  border h-[50%] border-neutral-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
@@ -67,4 +67,4 @@ const Toolbox = () => {
   );
 };
 
-export default Toolbox;
+export default Boxtool;

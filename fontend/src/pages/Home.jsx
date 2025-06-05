@@ -2,10 +2,11 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Experience from '../components/Experience'
 import FeaturedWork from '../components/FeaturedWork'
-import Toolbox from '../components/ToolBox'
 import Expertise from '../components/Expertise'
 import MotivationCertifications from '../components/MotivationCertification'
 import Testimonials from '../components/Testimonials'
+import Boxtool from '../components/Boxtool'
+
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
       <Hero/>
       <Experience/>
       <FeaturedWork/>
-      <Toolbox/>
+      <Boxtool/>
       <Expertise/>
       <MotivationCertifications/>
       <Testimonials/>

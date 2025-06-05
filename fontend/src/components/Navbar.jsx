@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,9 +16,9 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-xl font-semibold tracking-wide">
+          <Link to="/" className="text-xl font-semibold tracking-wide">
             SAMCREATES
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="space-x-6 hidden md:flex">

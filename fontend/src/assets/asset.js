@@ -5,28 +5,37 @@ import d from "../images/d.jpg"
 
 const featuredProjects = [
   {
+    slug: "project-one",
     title: "iPhone 16",
-    description: "Bold. Light. Beyond Vision.",
-    image: c
+    subtitle: "Bold. Light. Beyond Vision.",
+    description: "Immerse yourself in the cutting-edge of real estate design with this sleek and modern website template. Crafted to elevate any real estate agency's online presence, it offers an intuitive, user-friendly platform to showcase properties in style. Whether you're dealing with residential homes, commercial spaces, or luxury estates, this template combines visually striking layouts with effortless navigation. Highlight unique property features and engage clients with sophistication, positioning your agency as a standout leader in the competitive real estate market.",
+    image: c,
+    gallery: [b, a]  // these are already imported above
   },
   {
+    slug: "project-two",
     title: "Kitsilano",
-    description: "Seaside Escape",
-    image: a
+    subtitle: "Seaside Escape",
+   description: "Immerse yourself in the cutting-edge of real estate design with this sleek and modern website template. Crafted to elevate any real estate agency's online presence, it offers an intuitive, user-friendly platform to showcase properties in style. Whether you're dealing with residential homes, commercial spaces, or luxury estates, this template combines visually striking layouts with effortless navigation. Highlight unique property features and engage clients with sophistication, positioning your agency as a standout leader in the competitive real estate market.",
+    image: a,
+    // gallery: [g1, g2] // use the imports
   },
   {
+    slug: "project-three",
     title: "Printing Solutions",
-    description: "Modern 3D layout",
-    image: d
+    subtitle: "Modern 3D layout",
+    description: "Immerse yourself in the cutting-edge of real estate design with this sleek and modern website template. Crafted to elevate any real estate agency's online presence, it offers an intuitive, user-friendly platform to showcase properties in style. Whether you're dealing with residential homes, commercial spaces, or luxury estates, this template combines visually striking layouts with effortless navigation. Highlight unique property features and engage clients with sophistication, positioning your agency as a standout leader in the competitive real estate market.",
+    image: d,
+    // gallery: [g1, g2]
   },
   {
+    slug: "project-four",
     title: "Framer Xplore",
-    description: "Free Framer Components",
-    image: b
+    subtitle: "Free Framer Components",
+    description: "Immerse yourself in the cutting-edge of real estate design with this sleek and modern website template. Crafted to elevate any real estate agency's online presence, it offers an intuitive, user-friendly platform to showcase properties in style. Whether you're dealing with residential homes, commercial spaces, or luxury estates, this template combines visually striking layouts with effortless navigation. Highlight unique property features and engage clients with sophistication, positioning your agency as a standout leader in the competitive real estate market.",
+    image: b,
+    // gallery: [g1, g2]
   }
 ];
 
-export default featuredProjects;
-
-
-
+export default featuredProjects

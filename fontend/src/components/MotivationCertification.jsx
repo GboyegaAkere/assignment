@@ -3,7 +3,7 @@ const MotivationCertifications = () => {
     <section className="bg-black text-white px-4 py-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 ">
         {/* Motivation */}
-        <div className="border border-neutral-800 rounded px-5">
+        <div className="border border-neutral-800 rounded px-5 py-5">
           <h2 className="text-xl font-semibold mb-4">MOTIVATION</h2>
           <p className="text-sm text-neutral-300 leading-relaxed">
             Driven by a passion for innovative design and a commitment to delivering high-quality work, I find motivation in the challenges each project presents.
@@ -15,7 +15,7 @@ const MotivationCertifications = () => {
         </div>
 
         {/* Certifications */}
-        <div className="border border-neutral-800 rounded px-5">
+        <div className="border border-neutral-800 rounded px-5 py-5">
           <h2 className="text-xl font-semibold mb-4">CERTIFICATIONS</h2>
           <div className="mb-6">
             <h3 className="font-semibold text-sm">Awwwards – Site Of The Day</h3>

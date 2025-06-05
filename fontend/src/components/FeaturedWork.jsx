@@ -1,27 +1,5 @@
 import { motion } from "framer-motion";
-
-const featuredProjects = [
-  {
-    title: "iPhone 16",
-    description: "Bold. Light. Beyond Vision.",
-    image: "/images/iphone.png"
-  },
-  {
-    title: "Kitsilano",
-    description: "Seaside Escape",
-    image: "/images/kitsilano.png"
-  },
-  {
-    title: "Printing Solutions",
-    description: "Modern 3D layout",
-    image: "/images/print.png"
-  },
-  {
-    title: "Framer Xplore",
-    description: "Free Framer Components",
-    image: "/images/xplore.png"
-  }
-];
+import featuredProjects from "../assets/asset";
 
 const FeaturedWork = () => {
   return (
@@ -37,7 +15,8 @@ const FeaturedWork = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`relative rounded-xl overflow-hidden border border-neutral-800 bg-neutral-900 ${
+              whileHover={{ scale: 1.02 }}
+              className={`relative group rounded-xl overflow-hidden border border-neutral-800 bg-neutral-900 transition-shadow duration-300 ${
                 index > 1 ? "h-[150px]" : "h-[250px]"
               }`}
             >
@@ -46,7 +25,11 @@ const FeaturedWork = () => {
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-3 left-3 text-sm">
+              {/* Overlay on hover */}
+              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-700 transition-opacity duration-300" />
+              
+              {/* Text */}
+              <div className="absolute bottom-3 left-3 text-sm z-10">
                 <p className="font-semibold">{project.title}</p>
                 <p className="text-neutral-400 italic">{project.description}</p>
               </div>

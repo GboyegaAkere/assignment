@@ -6,8 +6,10 @@ import FeaturedWork from './components/FeaturedWork'
 import Toolbox from './components/ToolBox'
 import Expertise from './components/Expertise'
 import MotivationCertifications from './components/MotivationCertification'
-import Testimonials from './TEstimonials'
-import { Footer } from './Footer'
+
+import { Footer } from './components/Footer'
+import Testimonials from './components/Testimonials'
+
 
 const App = () => {
   return (

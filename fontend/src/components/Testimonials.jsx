@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const testimonials = [
   {
     name: "Emily Carter",
@@ -25,26 +27,38 @@ const testimonials = [
   }
 ];
 
+const duplicatedTestimonials = [...testimonials, ...testimonials];
+
 const Testimonials = () => {
   return (
-    <section className="bg-black text-white px-4 py-20 border-t border-neutral-800">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-black text-white py-10 px-10 mx-5 sm:mx-20 sm:py-5  border rounded border-neutral-800 overflow-hidden">
+      <div className="max-w-6xl mx-auto ">
         <h2 className="text-xl font-semibold mb-8 italic">TESTIMONIALS</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((item, index) => (
+
+        <motion.div
+          className="flex space-x-4 w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 30,
+            ease: "linear"
+          }}
+        >
+          {duplicatedTestimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-neutral-900 border border-neutral-800 rounded-xl p-4 h-full"
+              className="min-w-[300px] max-w-xs border border-neutral-800 rounded-xl p-4 h-full"
             >
-              <p className="text-sm text-neutral-300 mb-4">"{item.text}"</p>
               <div>
                 <p className="font-semibold text-sm">{item.name}</p>
                 <p className="text-xs text-neutral-500 mb-2">{item.role}</p>
-                <img src={item.logo} alt={item.name} className="h-4" />
+                <hr className="border-gray-700" />
               </div>
+              <p className="text-sm text-neutral-300 mt-3">"{item.text}"</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

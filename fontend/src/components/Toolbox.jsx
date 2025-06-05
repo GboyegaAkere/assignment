@@ -1,56 +1,67 @@
 import { motion } from "framer-motion";
-import { SiAdobeillustrator, SiAdobephotoshop, SiFigma, SiBlender, SiUnity, SiFramer } from "react-icons/si";
-import { FaCube } from "react-icons/fa";
+import b from "../images/a.png"
+import a from "../images/b.jpeg"
+import c from "../images/c.webp"
+import d from "../images/d.jpg"
 
-const tools = [
-  { icon: <SiFigma size={32} />, label: "Figma" },
-  { icon: <SiAdobeillustrator size={32} />, label: "Illustrator" },
-  { icon: <SiAdobephotoshop size={32} />, label: "Photoshop" },
-  { icon: <SiBlender size={32} />, label: "Blender" },
-  { icon: <SiUnity size={32} />, label: "Unity" },
-  { icon: <FaCube size={32} />, label: "3D" }
+const testimonials = [
+   {
+     image: b
+   },
+
+   {
+     image: a
+   },
+
+   {
+     image: c
+   },
+    {
+     image: b
+   },
+
+   {
+     image: d
+   },
+    {
+     image: b
+   },
+   {
+     image: a
+   },
+   {
+     image: b
+   },
+   {
+     image: b
+   },
 ];
 
+const duplicatedTestimonials = [...testimonials, ...testimonials];
+
 const Toolbox = () => {
-  return (
-    <section className="bg-black text-white px-4 py-20 border-t border-neutral-800">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-2xl font-semibold mb-10"
-        >
-          TOOLBOX
-        </motion.h2>
-
-        <div className="flex flex-wrap gap-6 justify-center items-center">
-          {tools.map((tool, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
-              className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 flex flex-col items-center justify-center w-20 h-20"
-            >
-              {tool.icon}
-              <span className="text-xs mt-2 text-neutral-400">{tool.label}</span>
-            </motion.div>
-          ))}
+ return (
+    <section className="bg-black py-10 px-10 mx-5 sm:mx-20 sm:py-5  border h-[50%] border-neutral-800 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-white text-4xl font-semibold mb-10 text-left">Toolbox</h2>
+        <div className="flex justify-center">
+          <motion.div
+            className="flex w-max"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 30,
+              ease: "linear"
+            }}
+          >
+            {duplicatedTestimonials.map((item, index) => (
+              <div key={index} className="min-w-[80px] max-w-[80px] h-[80px] mx-3 bg-black border border-neutral-700 rounded-sm flex items-center justify-center">
+                <img src={item.image} alt="logo" className="w-[50px] h-[50px] object-contain" />
+              </div>
+            ))}
+          </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="mt-16"
-        >
-          <img
-            src="/images/framer-banner.png"
-            alt="Framer Xplore"
-            className="w-full rounded-xl border border-neutral-800 shadow-md"
-          />
-        </motion.div>
       </div>
     </section>
   );

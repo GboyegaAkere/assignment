@@ -38,7 +38,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="w-full px-4 md:px-12 py-16 bg-black text-white">
+    <section className="w-full px-4  md:px-12 border border-gray-800  py-16 bg-black text-white">
       <motion.h2
         className="text-2xl font-bold mb-8 border-b border-gray-700 inline-block"
         initial={{ opacity: 0, y: 20 }}

@@ -24,7 +24,8 @@ export function Hero() {
             viewport={{ once: true }}
           >
             <h1 className="text-6xl md:text-center md:text-8xl font-bold ">
-              SAM <br className="block" /> CREATES
+             <p className="text-left">SAM</p>
+             <p>CREATES</p>
             </h1>
           </motion.div>
 

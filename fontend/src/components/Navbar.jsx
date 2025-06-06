@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full bg-black text-white border border-neutral-800 rounded-md px-4 py-4 flex justify-between items-center">
             <Link to="/" className="text-xl font-semibold tracking-wide">
-              SAMCREATES
+              SAM CREATES
             </Link>
 
             {/* Desktop Menu */}

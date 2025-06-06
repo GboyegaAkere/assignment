@@ -4,22 +4,57 @@ import featuredProjects from "../assets/asset";
 
 const FeaturedWork = () => {
   return (
-    <section className="bg-black text-white py-20 border-t border-neutral-800">
+    <section className="bg-black text-white py-10 ">
       <div className="max-w-7xl mx-auto w-full px-6 md:px-10">
-        <h2 className="text-xl font-semibold mb-4">
-          <span className="text-neutral-400 italic">FEATURED WORK</span>
-        </h2>
         <div className="grid md:grid-cols-2 gap-4">
-          {featuredProjects.map((project, index) => (
-            <Link to={`/projects/${project.slug}`} key={index}>
+          {/* Left Column: Title Card + App Navigation Card */}
+          <div className="flex flex-col gap-4">
+            {/* FEATURED WORK title card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="rounded-xl border border-neutral-800 bg-[#0a0a0a] p-6 h-[80px] flex items-center"
+            >
+              <h2 className="text-3xl font-bold text-white italic">
+                FEATURED WORK
+              </h2>
+            </motion.div>
+
+            {/* App Navigation card (shorter height) */}
+            {featuredProjects[0] && (
+              <Link to={`/projects/${featuredProjects[0].slug}`}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="relative group rounded-xl overflow-hidden border border-neutral-800 bg-neutral-900 h-[170px] transition-shadow duration-300"
+                >
+                  <img
+                    src={featuredProjects[0].image}
+                    alt={featuredProjects[0].title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-700 transition-opacity duration-300" />
+                  <div className="absolute bottom-3 left-3 text-sm z-10">
+                    <p className="font-semibold">{featuredProjects[0].title}</p>
+                    <p className="text-neutral-400 italic">{featuredProjects[0].subtitle}</p>
+                  </div>
+                </motion.div>
+              </Link>
+            )}
+          </div>
+
+          {/* Right Column: Keep all other cards untouched */}
+          {featuredProjects.slice(1).map((project, index) => (
+            <Link to={`/projects/${project.slug}`} key={index + 1}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.02 }}
-                className={`relative group rounded-xl overflow-hidden border border-neutral-800 bg-neutral-900 transition-shadow duration-300 ${
-                  index > 1 ? "h-[150px]" : "h-[250px]"
-                }`}
+                className="relative group rounded-xl overflow-hidden border border-neutral-800 bg-neutral-900 h-[250px] transition-shadow duration-300"
               >
                 <img
                   src={project.image}

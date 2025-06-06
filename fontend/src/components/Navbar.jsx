@@ -10,45 +10,47 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <motion.nav
-        className="w-full fixed top-0 left-0 z-50 bg-black text-white border-b border-neutral-800"
+        className="w-full fixed top-4 left-0 z-50"
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="text-xl font-semibold tracking-wide">
-            SAMCREATES
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="space-x-6 hidden md:flex">
-            <a href="#about" className="hover:underline underline-offset-4 transition-all duration-300">
-              ABOUT
-            </a>
-            <Link to="./mywork" className="hover:underline underline-offset-4 transition-all duration-300">
-              WORK
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full bg-black text-white border border-neutral-800 rounded-md px-4 py-4 flex justify-between items-center">
+            <Link to="/" className="text-xl font-semibold tracking-wide">
+              SAMCREATES
             </Link>
-            <a href="#contact" className="hover:underline underline-offset-4 transition-all duration-300">
-              CONTACT
-            </a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+            {/* Desktop Menu */}
+            <div className="space-x-6 hidden md:flex">
+              <a href="#about" className="hover:underline underline-offset-4 transition-all duration-300">
+                ABOUT
+              </a>
+              <Link to="./mywork" className="hover:underline underline-offset-4 transition-all duration-300">
+                WORK
+              </Link>
+              <a href="#contact" className="hover:underline underline-offset-4 transition-all duration-300">
+                CONTACT
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </motion.nav>
 
-      {/* Fixed Mobile Menu Panel (not full screen) */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed top-[64px] left-0 right-0 z-40 bg-black text-white px-6 py-6 shadow-xl border-b border-neutral-800 md:hidden"
+            className="fixed top-[78px] left-4 right-4 z-40 bg-black text-white px-6 py-6 shadow-xl border border-neutral-800 rounded-md md:hidden"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

@@ -31,7 +31,7 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
 
 const Testimonials = () => {
   return (
-    <section className="bg-black text-white py-10 mt-5 px-10 mx-5 sm:mx-20 sm:py-5 border rounded border-neutral-800 overflow-hidden">
+    <section className="bg-black text-white py-10 mt-5 px-10 mx-5 sm:mx-20 sm:py-5 border rounded-lg border-neutral-800 overflow-hidden">
       <div className="max-w-6xl mx-auto ">
         <h2 className="text-3xl font-bold text-white mb-8 italic">TESTIMONIALS</h2>
 

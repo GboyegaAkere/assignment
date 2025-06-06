@@ -28,8 +28,8 @@ const Boxtool = () => {
     <section className="bg-black text-white py-5">
       <div className="max-w-7xl mx-auto w-full px-6 md:px-10">
         {/* Bordered container with title and cards */}
-        <div className="border border-neutral-800 rounded-md overflow-hidden py-6 px-4">
-          <h2 className="text-4xl font-bold text-white mb-6 px-2">Toolbox</h2>
+        <div className="border border-neutral-800 rounded-lg overflow-hidden py-6 px-4">
+          <h2 className="text-4xl font-bold text-white mb-6 px-2">TOOLBOX</h2>
 
           <motion.div
             className="flex w-max space-x-6 border-l border-gray-100"

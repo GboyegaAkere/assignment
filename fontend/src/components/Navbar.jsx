@@ -25,9 +25,9 @@ const Navbar = () => {
             <a href="#about" className="hover:underline underline-offset-4 transition-all duration-300">
               ABOUT
             </a>
-            <a href="#work" className="hover:underline underline-offset-4 transition-all duration-300">
+            <Link to="./mywork" className="hover:underline underline-offset-4 transition-all duration-300">
               WORK
-            </a>
+            </Link>
             <a href="#contact" className="hover:underline underline-offset-4 transition-all duration-300">
               CONTACT
             </a>

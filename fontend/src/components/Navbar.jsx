@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <motion.nav
-        className="w-full fixed top-4 left-0 z-50"
+        className="w-full fixed top-2 left-0 z-50"
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -50,7 +50,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed top-[78px] left-4 right-4 z-40 bg-black text-white px-6 py-6 shadow-xl border border-neutral-800 rounded-md md:hidden"
+            className="fixed top-[70px] left-4 right-4 z-40 bg-black text-white px-6 py-6 shadow-xl border border-neutral-800 rounded-md md:hidden"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

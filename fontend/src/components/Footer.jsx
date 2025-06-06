@@ -9,14 +9,14 @@ export function Footer() {
           {/* Copyright Card */}
           <div className="border border-gray-800 rounded-md py-6 px-4 h-[82px] flex items-center justify-center md:justify-start flex-1 w-full">
             <p className="text-gray-400 text-center md:text-left text-sm">
-              © 2024, All Rights Reserved. Designed & Built by{' '}
+              © 2025, All Rights Reserved. Designed & Built by{' '}
               <a
                 href="https://framerxplore.com"
                 className="text-blue-400 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                FramerXplore
+                Oluwagboyega
               </a>
             </p>
           </div>

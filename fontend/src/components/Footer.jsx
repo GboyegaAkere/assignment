@@ -1,18 +1,32 @@
-const Footer = () => {
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+
+export function Footer() {
   return (
-    <footer className="bg-black text-white py-10 px-6 md:px-10">
-      <div className="max-w-7xl mx-auto w-full border-t border-neutral-800 pt-6">
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-neutral-400 gap-4">
-          <p>&copy; {new Date().getFullYear()} Samkeet Mehta. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="https://linkedin.com" className="hover:text-white">LinkedIn</a>
-            <a href="https://github.com" className="hover:text-white">GitHub</a>
-            <a href="mailto:samkeetm@gmail.com" className="hover:text-white">Email</a>
-          </div>
+    <footer className="bg-black text-white px-6 py-4 text-sm">
+      <div className="max-w-7xl mx-auto w-full border border-gray-800 rounded-md py-6 px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-gray-400">
+          © 2024, All Rights Reserved. Designed & Built by{' '}
+          <a
+            href="https://framerxplore.com"
+            className="text-blue-400 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FramerXplore
+          </a>
+        </p>
+        <div className="flex space-x-4">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="text-white hover:text-blue-500" size={18} />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="text-white hover:text-pink-500" size={18} />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="text-white hover:text-gray-400" size={18} />
+          </a>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -38,37 +38,40 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="w-full px-4  md:px-12 border border-gray-800  py-16 bg-black text-white">
-      <motion.h2
-        className="text-2xl font-bold mb-8 border-b border-gray-700 inline-block"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        EXPERIENCE
-      </motion.h2>
+    <section className="bg-black text-white py-16">
+  <motion.div
+    className="max-w-7xl mx-auto w-full px-6 md:px-10"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <h2 className="text-2xl font-bold mb-8 border-b border-gray-700 inline-block">
+      EXPERIENCE
+    </h2>
 
-      <div className="space-y-8">
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            className="bg-[#0a0a0a] rounded-xl p-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
-          >
-            <h3 className="text-lg font-semibold">{exp.title}</h3>
-            <p className="text-sm text-gray-400">{exp.company}</p>
-            <p className="text-xs text-gray-500 mb-4">{exp.date}</p>
-            <ul className="list-disc ml-5 space-y-1 text-sm">
-              {exp.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+    <div className="space-y-8">
+      {experiences.map((exp, index) => (
+        <motion.div
+          key={index}
+          className="bg-[#0a0a0a] rounded-xl p-6 border border-gray-800"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.2 }}
+        >
+          <h3 className="text-lg font-semibold">{exp.title}</h3>
+          <p className="text-sm text-gray-400">{exp.company}</p>
+          <p className="text-xs text-gray-500 mb-4">{exp.date}</p>
+          <ul className="list-disc ml-5 space-y-1 text-sm">
+            {exp.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+</section>
+
   );
 };
 

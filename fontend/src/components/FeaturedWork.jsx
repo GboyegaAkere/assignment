@@ -4,8 +4,8 @@ import featuredProjects from "../assets/asset";
 
 const FeaturedWork = () => {
   return (
-    <section className="bg-black text-white px-4 py-20 border-t border-neutral-800">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-black text-white py-20 border-t border-neutral-800">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-10">
         <h2 className="text-xl font-semibold mb-4">
           <span className="text-neutral-400 italic">FEATURED WORK</span>
         </h2>

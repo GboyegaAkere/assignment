@@ -21,8 +21,8 @@ const expertise = [
 
 const Expertise = () => {
   return (
-    <section className="bg-black text-white px-4 py-20">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+    <section className="bg-black text-white py-20 border-t border-neutral-800">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-10 grid md:grid-cols-2 gap-10">
         <div className="space-y-6">
           {expertise.map((item, index) => (
             <motion.div

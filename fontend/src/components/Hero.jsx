@@ -23,10 +23,10 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h1 className="text-6xl md:text-center md:text-8xl font-bold ">
+            <div className="text-6xl md:text-center md:text-8xl font-bold mx-auto ">
              <p className="text-left">SAM</p>
              <p>CREATES</p>
-            </h1>
+            </div>
           </motion.div>
 
           {/* Image Placeholder Card - hidden on mobile */}

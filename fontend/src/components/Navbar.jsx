@@ -23,13 +23,13 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="space-x-6 hidden md:flex">
-              <a href="#about" className="hover:underline underline-offset-4 transition-all duration-300">
+              <a href="#about">
                 ABOUT
               </a>
-              <Link to="./mywork" className="hover:underline underline-offset-4 transition-all duration-300">
+              <Link to="./mywork">
                 WORK
               </Link>
-              <a href="#contact" className="hover:underline underline-offset-4 transition-all duration-300">
+              <a href="#contact">
                 CONTACT
               </a>
             </div>

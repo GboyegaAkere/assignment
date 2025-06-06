@@ -58,9 +58,9 @@ const Navbar = () => {
               <a href="#about" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                 ABOUT
               </a>
-              <a href="#work" onClick={() => setIsOpen(false)} className="text-lg font-medium">
+              <Link to="./mywork" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                 WORK
-              </a>
+              </Link>
               <a href="#contact" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                 CONTACT
               </a>

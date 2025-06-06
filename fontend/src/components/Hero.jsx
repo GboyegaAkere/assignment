@@ -29,16 +29,16 @@ export function Hero() {
           </motion.div>
 
           {/* Image Placeholder Card - hidden on mobile */}
-          <motion.div
-            className="hidden md:block w-[30%] lg:w-[35%] h-[247px] border border-gray-800 rounded-md bg-neutral-900"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            {/* You can place an image here later */}
-            <img src={ceo} className="w-full h-[247px]" alt="" />
-          </motion.div>
+         <motion.div
+  className="w-full md:w-[30%] lg:w-[35%] h-[247px] border border-gray-800 rounded-md bg-neutral-900"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.1 }}
+  viewport={{ once: true }}
+>
+  <img src={ceo} className="w-full h-[247px] object-cover rounded-md" alt="CEO" />
+</motion.div>
+
         </div>
 
         {/* Bottom Cards */}
